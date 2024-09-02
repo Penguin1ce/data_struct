@@ -1,0 +1,2 @@
+        预处理      编译       汇编        链接
+hello.c -> hello.i -> hello.s -> hello.o -> hello
