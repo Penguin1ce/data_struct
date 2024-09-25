@@ -7,9 +7,9 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "${file}",
+                "${file}",// 只运行或调试当前文件
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
+                "${fileDirname}/bin/${fileBasenameNoExtension}"
             ],
             "options": {
                 "cwd": "${fileDirname}"
