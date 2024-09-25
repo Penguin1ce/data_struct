@@ -1,2 +1,6 @@
 tree
 leetcode/19
+bin/
+.vscode/
+.vscode/launch.json
+.vscode/tasks.json

@@ -10,21 +10,21 @@ struct TreeNode {
     TreeNode *right;
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
-
+//前序遍历(根左右)
 void inorderTraversal(TreeNode* root) {
     if (root == NULL) return;
     inorderTraversal(root->left);
     cout << root->val << " ";
     inorderTraversal(root->right);
 }
-
+//后序遍历(左右根)
 void postorderTraversal(TreeNode* root) {
     if (root == NULL) return;
     postorderTraversal(root->left);
     postorderTraversal(root->right);
     cout << root->val << " ";
 }
-
+//中序遍历(层次遍历)
 void levelOrderTraversal(TreeNode* root) {
     if (root == NULL) return;
     queue<TreeNode*> q;
@@ -33,8 +33,8 @@ void levelOrderTraversal(TreeNode* root) {
         TreeNode* node = q.front();
         q.pop();
         cout << node->val << " ";
-        if (node->left != NULL) q.push(node->left);
-        if (node->right != NULL) q.push(node->right);
+        if (node->left != NULL) q.push(node->left);//左子树入队
+        if (node->right != NULL) q.push(node->right);//右子树入队
     }
 }
 
