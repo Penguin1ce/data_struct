@@ -18,5 +18,10 @@ int main()
     {
         std::cout << *it << " ";  // 输出 1 2 3 4
     }
+    printf("\n");
+    std::cout<<sizeof(int)<<std::endl;
+    std::cout<<sizeof(int *)<<std::endl;
+    std::cout<<sizeof(double)<<std::endl;
+    std::cout<<sizeof(double *)<<std::endl;
 
 }
