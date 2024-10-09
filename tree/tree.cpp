@@ -60,7 +60,7 @@ void search(TreeNode *root, int K)
         return;
     if (root->val == K)
     {
-        cout << "Find" << K << endl;
+        cout << "Find " << K << endl;
         return;
     }
     search(root->left, K);
@@ -76,6 +76,7 @@ int main()
     root->right->right = new TreeNode(7);
     root->left->left = new TreeNode(3);
     root->left->right = new TreeNode(4);
+    search(root, 3);
     cout << "中序遍历结果: ";
     inorderTraversal(root);
     cout << endl;
