@@ -8,3 +8,44 @@ hello.c -> hello.i -> hello.s -> hello.o -> hello
         10->2
 2:
         1.xxxx的格式
+平衡树
+改进自BST 为了实现更搞笑的额查询的一种搜索树
+        得到一棵具有平衡性的树
+        已经有一棵不平衡的树 -> 经过调整
+        只有一个结点的树 -> 在插入，删除等操作中保持自平衡
+B树
+树能不能别变高了？
+-> 那就不添加新结点了，这样的树永远不会变高
+-> 强制往叶子结点加元素，让叶子结点过载
+-> 这种过载的树高度永远不会变 保证左小右大
+
+用向上移动解决过载树的问题
+叶子结点装的太多，会退化为链表
+解决方法
+给结点包含的数据量设置一个限制L，假设每个结点可以包含元素量的最大值为 L = 3
+如果一个结点含有的元素超过了 L，就把这个节点的一个元素给父结点
+        规定是中间的元素，如果中间元素有两个，选取两个中偏左的
+连锁分裂
+B树的性质：
+        所有的叶子结点深度（距离根节点的边数）相等
+        一个非叶子结点有n个元素的结点，一定有n+1个子节点
+
+堆排序：
+Heap sorting N items: 
+Bottom-up heapify input array (done!).
+Repeat N times:
+Delete largest item from the max heap, swapping root with last item in the heap.
+
+归并排序：
+Top-Down merge sorting N items: 
+Split items into 2 roughly even pieces.
+Mergesort each half.
+Merge the two sorted halves to form the final result.
+自顶向下合并排序（Top-Down Merge Sort）对 N 个元素排序的过程如下：
+        拆分：将元素分成两个大致相等的部分。
+        递归排序：对每一部分分别使用合并排序进行排序。
+        合并：将这两个已经排序的部分合并，形成最终的有序结果。
+        详细步骤
+        合并排序是一个递归算法，它不断地将数组分成更小的部分，直到每个部分只剩下一个元素（单个元素本身是有序的）。
+        然后，算法通过合并这些小部分来逐步构建和排序整个数组。
+        这种排序方法的时间复杂度为 O(N log N)，适用于大数据量排序，且具有稳定性。
